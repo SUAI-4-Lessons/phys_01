@@ -1,4 +1,4 @@
-% Created 2024-10-02 Wed 23:33
+% Created 2024-10-03 Thu 14:41
 % Intended LaTeX compiler: pdflatex
 \documentclass[14pt]{extarticle}
 \usepackage[utf8]{inputenc}
@@ -25,9 +25,12 @@
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{titlesec}
-\titleformat{\section}{\normalsize\bfseries}{}{1.25cm}{}
-\titleformat{\subsection}{\normalsize\bfseries}{}{1.25cm}{}
-\titleformat{\subsubsection}{\normalsize\bfseries}{}{1.25cm}{}
+\titleformat{\section}{\normalsize\bfseries}{\makebox[1.5cm][r]{\thesection}}{0.1cm}{}
+\titlespacing{\section}{0pt}{*1}{*0}
+\titleformat{\subsection}{\normalsize\bfseries}{\makebox[1.5cm][r]{\thesubsection}}{0.1cm}{}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\makebox[1.5cm][r]{\thesubsubsection}}{0.1cm}{}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
 \addto\captionsrussian{\renewcommand{\contentsname}{\centering \normalsize СОДЕРЖАНИЕ}}
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \usepackage{titletoc}
@@ -50,14 +53,14 @@
 \captionsetup[listing]{style=leftalign, labelsep=custom, name=Листинг} % Правим позицию заголовка для listing
 \usepackage{enumitem}
 \setlist[enumerate]{itemindent=1.85cm,leftmargin=0pt}
-\author{Pankov Vasya}
+\author{В.Д. Панков}
 \date{\today}
 \title{ОПРЕДЕЛЕНИЕ ЭЛЕКТРИЧЕСКОГО СОПРОТИВЛЕНИЯ}
 \hypersetup{
- pdfauthor={Pankov Vasya},
+ pdfauthor={В.Д. Панков},
  pdftitle={ОПРЕДЕЛЕНИЕ ЭЛЕКТРИЧЕСКОГО СОПРОТИВЛЕНИЯ},
  pdfkeywords={},
- pdfsubject={},
+ pdfsubject={М.В. Величко},
  pdfcreator={Emacs 29.4 (Org mode 9.7.11)}, 
  pdflang={Russian}}
 
@@ -234,7 +237,7 @@
 
 \vspace{32pt}
 
-\centering{КАФЕДРА №1}
+\centering{КАФЕДРА №3}
 
 \vspace{60pt}
 
@@ -247,14 +250,14 @@
 \vspace{12pt}
 
 \begin{tabularx}{\textwidth}{ >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X }
-	 старший преподаватель & &  \\ 
+	 старший преподаватель & & М.В. Величко \\ 
 	 \hrulefill & \hrulefill & \hrulefill \\ 
 \footnotesize{должность, уч. степень, звание} & \footnotesize{подпись, дата} & \footnotesize{инициалы, фамилия} \\ 
 \end{tabularx} 
  
 \vspace{48pt} 
 
-\centering{ОТЧЕТ О ЛАБОРАТОРНОЙ РАБОТЕ} 
+\centering{ОТЧЕТ О ЛАБОРАТОРНОЙ РАБОТЕ №1} 
 
 \vspace{40pt} 
 
@@ -262,7 +265,7 @@
 
 \vspace{40pt} 
 
-\centering{По курсу: } 
+\centering{По курсу: Информатика} 
 
 \vspace*{\fill} 
 
@@ -271,7 +274,7 @@
 \vspace{10pt} 
 
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X  >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X }
-СТУДЕНТ ГР. № & М412 & & Pankov Vasya \\ 
+СТУДЕНТ ГР. № & М412 & & В.Д. Панков \\ 
 	 & \hrulefill & \hrulefill & \hrulefill \\ 
 	 &  & \footnotesize{подпись, дата} & \footnotesize{инициалы, фамилия} \\ 
 \end{tabularx} 
@@ -282,10 +285,8 @@
 
 \end{titlepage}
 \end{small}
-
-\tableofcontents \clearpage
 \section{Цель работы}
-\label{sec:orgd604c2c}
+\label{sec:org7160f5d}
 
 \begin{itemize}
 \item Ознакомление с методикой обработки результатов измерений;
@@ -294,21 +295,21 @@
 \item определение удельного сопротивления нихрома.
 \end{itemize}
 \section{Описание лабораторной установки}
-\label{sec:orgfbf1070}
+\label{sec:orgbd262b7}
 
-На рисунке \ref{fig:org63ed464} представлены схемы в которых проводились измерения в ходе
+На рисунке \ref{fig:orge3e807f} представлены схемы в которых проводились измерения в ходе
 лабораторной работы.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=.9\linewidth]{./images/twoSchemes.png}
-\caption{\label{fig:org63ed464}Использованные измерительные схемы. Слева – схема A, справа – схема B}
+\caption{\label{fig:orge3e807f}Использованные измерительные схемы. Слева – схема A, справа – схема B}
 \end{figure}
 
-Параметры установки представлены в таблице \ref{tab:org8b27c20}.
+Параметры установки представлены в таблице \ref{tab:org8153a32}.
 
 \begin{longtable}{|p{3.9cm}|l|p{2cm}|p{1.3cm}|p{1.2cm}|p{3.6cm}|p{1.2cm}|}
-\caption{\label{tab:org8b27c20}Параметры установки}
+\caption{\label{tab:org8153a32}Параметры установки}
 \\
 \hline
 Прибор & Тип & Предел измерений & Цена деления & Класс точности & Систематическая погрешность & R, Ом\\
@@ -333,28 +334,28 @@
 \hline
 \end{longtable}
 \section{Рабочие формулы}
-\label{sec:orgd148c89}
+\label{sec:org6d54656}
 
 Формулы для вычисления электрического сопротивления:
 
 \begin{itemize}
-\item закон Ома, формула (\ref{eq:org12d8204});
-\item для схемы А, формула (\ref{eq:orgd445201});
-\item для схемы B, формула (\ref{eq:org3d4424d}).
+\item закон Ома, формула (\ref{eq:orgcd2ac1e});
+\item для схемы А, формула (\ref{eq:org859e0a5});
+\item для схемы B, формула (\ref{eq:org0ea6f10}).
 \end{itemize}
 
 \begin{equation}
-\label{eq:org12d8204}
+\label{eq:orgcd2ac1e}
 R = \frac{U}{I}
 \end{equation}
 
 \begin{equation}
-\label{eq:orgd445201}
+\label{eq:org859e0a5}
 R = \frac{U}{I} - R_a
 \end{equation}
 
 \begin{equation}
-\label{eq:org3d4424d}
+\label{eq:org0ea6f10}
 R = (\frac{I}{U} - \frac{1}{R_V})^-1
 \end{equation}
 
@@ -372,15 +373,15 @@ R = (\frac{I}{U} - \frac{1}{R_V})^-1
 
 Для вычисления среднего сопротивления будет использоваться простая
 формула среднего арифметического всех имеющихся сопротивлений
-представленная в формуле (\ref{eq:org2d93c4c}), где \(n\) - число измерений.
+представленная в формуле (\ref{eq:orga57bde9}), где \(n\) - число измерений.
 
 
 \begin{equation}
-\label{eq:org2d93c4c}
+\label{eq:orga57bde9}
 R_{avg} = \frac{\sum\limits_{i = 1}^{n} R_i}{n}
 \end{equation}
 
-Для вычисления же удельного сопротивления будет использована формула (\ref{eq:org2646683}),
+Для вычисления же удельного сопротивления будет использована формула (\ref{eq:orgb892e88}),
 где используются следующие обозначения:
 
 \begin{itemize}
@@ -390,16 +391,16 @@ R_{avg} = \frac{\sum\limits_{i = 1}^{n} R_i}{n}
 \end{itemize}
 
 \begin{equation}
-\label{eq:org2646683}
+\label{eq:orgb892e88}
 \rho = \frac{R_{avg} \pi D^2}{4l}
 \end{equation}
 \section{Результаты измерений и вычисления}
-\label{sec:org71a1726}
+\label{sec:org48eda64}
 
-Результаты измерений и вычислений для схемы А представлены в таблице \ref{tab:org82e5dd4}.
+Результаты измерений и вычислений для схемы А представлены в таблице \ref{tab:orgf1ed3c3}.
 
 \begin{longtable}{|l|r|r|r|r|r|r|r|r|r|r|}
-\caption{\label{tab:org82e5dd4}Схема А}
+\caption{\label{tab:orgf1ed3c3}Схема А}
 \\
 \hline
 U,В & 0.35 & 0.45 & 0.55 & 0.65 & 0.75 & 0.85 & 0.95 & 1.05 & 1.15 & 1.25\\
@@ -426,11 +427,11 @@ R, Ом & 5.63 & 5.43 & 5.3 & 5.22 & 5.16 & 5.11 & 5.07 & 5.05 & 5.03 & 5.01\\
 \hline
 \end{longtable}
 
-Результаты измерений и вычислений для схемы B представлены в таблице \ref{tab:org987e67d}.
+Результаты измерений и вычислений для схемы B представлены в таблице \ref{tab:orgb2667b1}.
 
 
 \begin{longtable}{|l|r|r|r|r|r|r|r|r|r|r|}
-\caption{\label{tab:org987e67d}Схема B}
+\caption{\label{tab:orgb2667b1}Схема B}
 \\
 \hline
 U,В & 0.3 & 0.4 & 0.5 & 0.6 & 0.7 & 0.8 & 0.9 & 1.0 & 1.1 & 1.2\\
@@ -459,22 +460,22 @@ R, Ом & 5.01 & 5.01 & 5.01 & 5.01 & 5.01 & 5.01 & 5.01 & 5.01 & 5.01 & 5.01\\
 
 \(R_avg = 5.1 Om\); \$\(\rho\) = 9.32 \(\cdot\) 10\textsuperscript{-7} Om \(\cdot\) m \$
 \section{Примеры вычислений}
-\label{sec:org02a4b21}
+\label{sec:orge473d74}
 
-По формуле (\ref{eq:org12d8204}) \(R = \frac{U}{I} = \frac{0.35}{0.06} \approx 5.83\)
+По формуле (\ref{eq:orgcd2ac1e}) \(R = \frac{U}{I} = \frac{0.35}{0.06} \approx 5.83\)
 
-По формуле (\ref{eq:orgd445201}) \(R = \frac{U}{I} - R_a = \frac{0.45}{0.08} - 0.2 = 5.625 - 0.2 = 5.425 \approx = 5.43\)
+По формуле (\ref{eq:org859e0a5}) \(R = \frac{U}{I} - R_a = \frac{0.45}{0.08} - 0.2 = 5.625 - 0.2 = 5.425 \approx = 5.43\)
 
-По формуле (\ref{eq:org3d4424d}) \(R = (\frac{I}{U} - \frac{1}{R_V})^-1 = (\frac{0.06}{3} - \frac{1}{2000})^-1  = (0.2 - 0.0005)^-1 = \frac{1/0.1995} \approx = 5.01\)
+По формуле (\ref{eq:org0ea6f10}) \(R = (\frac{I}{U} - \frac{1}{R_V})^-1 = (\frac{0.06}{3} - \frac{1}{2000})^-1  = (0.2 - 0.0005)^-1 = \frac{1/0.1995} \approx = 5.01\)
 
-По формуле (\ref{eq:org2d93c4c}) \(R = (5.63+5.42+5.3+5.22+5.16+5.11+5.07+5.05+5.03+5.01+5+5+5+5+5+5+5+5+5+5) : 20 = \frac{102}{20} = 5.1\)
+По формуле (\ref{eq:orga57bde9}) \(R = (5.63+5.42+5.3+5.22+5.16+5.11+5.07+5.05+5.03+5.01+5+5+5+5+5+5+5+5+5+5) : 20 = \frac{102}{20} = 5.1\)
 
-По формуле (\ref{eq:org2646683}) \(\rho = \frac{R_{avg} \pi D^2}{4l} = \frac{5.1 \cdot 3.14 \cdot (0.00032)^2}{4 \cdot 0.44} \approx \frac{1.64 \cdot 10^{-6}}{1.76} \approx 0.931 \cdot 10^{-6}\)
+По формуле (\ref{eq:orgb892e88}) \(\rho = \frac{R_{avg} \pi D^2}{4l} = \frac{5.1 \cdot 3.14 \cdot (0.00032)^2}{4 \cdot 0.44} \approx \frac{1.64 \cdot 10^{-6}}{1.76} \approx 0.931 \cdot 10^{-6}\)
 \section{Вычисление погрешности}
-\label{sec:org410b282}
+\label{sec:orgca517e0}
 
 \subsection{Систематические погрешности}
-\label{sec:orgabc2a2e}
+\label{sec:org4accb07}
 
 Систематическая погрешность силы тока: \(\Theta_I = \frac{I_m K_I}{100} = \frac{0.25 \cdot 1.5}{100} = 3.75 mA = 0.00375 A\)
 
@@ -509,25 +510,83 @@ $$ \Theta_R  = R(\frac{\Theta_U}{U} + \frac{\Theta_I}{I}) $$
 погрешности сопротивления металла
 
 
-$$ \pho = \frac{R_{avg} \pi D^2}{4l}  $$
+$$ \rho = \frac{R_{avg} \pi D^2}{4l}  $$
 
-\(\Theta_{\pho} = \pho( \frac{\Theta_R_{avg}}{R_{avg}} + \frac{\Theta_l}{l} + 2  \frac{\Theta_D}{D} = 9.32 \cdot 10^{-7}(\frac{0.18}{5.1} + \frac{0.002}{0.47} + \frac{1 \cdot 10^{-5}}{32 \cdot 10^{-5}}) \approx = 6.59 \cdot 10^{-8}\) 
+\(\Theta_{\rho} = \rho( \frac{\Theta_R_{avg}}{R_{avg}} + \frac{\Theta_l}{l} + 2  \frac{\Theta_D}{D} = 9.32 \cdot 10^{-7}(\frac{0.18}{5.1} + \frac{0.002}{0.47} + \frac{1 \cdot 10^{-5}}{32 \cdot 10^{-5}}) \approx = 0.659 \cdot 10^{-7}\) 
 \subsection{Случайные погрешности}
-\label{sec:orge5f1cb5}
+\label{sec:orgf834f7d}
 
 Средняя квадратичная погрешность отдельного измерения
 
 $$ S_R = \sqrt{\frac{(R_1 - R_{avg})^2 + (R_2 - R_{avg})^2 + ... + (R_N - R_{avg})^2}{
 N - 1}} $$
 
-\begin{tiny}
-$$S_R = \sqrt{\frac{(5.63-5.1)^2+(5.42-5.1)^2+(5.3-5.1)^2+(5.22-5.1)^2+(5.16-5.1)^2+(5.11-5.1)^2+(5.07-5.1)^2+(5.05-5.1)^2+(5.03-5.1)^2+(5.01-5.1)^2+10 \cdot (5.0-5.1)^2}{19}} = \sqrt{\frac{0.5578}{19}} \approx 0.17$$
-\end{tiny}
+$$sum = (5.63-5.1)^2+(5.42-5.1)^2+(5.3-5.1)^2+(5.22-5.1)^2+(5.16-5.1)^2+(5.11-5.1)^2+(5.07-5.1)^2+(5.05-5.1)^2+(5.03-5.1)^2+(5.01-5.1)^2+10 \cdot (5.0-5.1)^2 $$
+
+$$S_R = \sqrt{\frac{sum}{19}} = \sqrt{\frac{0.5578}{19}} \approx 0.17$$
 
 Средне квадратичное отклонение
 
 $$ S_R_{avg} = \sqrt{\frac{(R_1 - R_{avg})^2 + (R_2 - R_{avg})^2 + ... + (R_N - R_{avg})^2}{
 (N - 1)N}} = \frac{S_R}{\sqrt{N}} $$
 
-$$ S_R_{avg} = \frac{0.17}{\sqrt{20}} \approx 0.4 $$
+$$ S_R_{avg} = \frac{0.17}{\sqrt{20}} \approx 0.038 $$
+
+
+В данной лабораторной работе проводится
+измерение неслучайных по своей природе физ. величин
+электрического сопротивления  провода R и удельного
+сопротивление нихрома - \(\rho\), поэтому проверяем
+неравенства:
+
+\(S_R \leq \Theta_R\) ; \(S_R_{avg} < \Theta_R\) 
+
+\(0.17 \leq 0.18\) ;  \(0.038 < 0.18\)
+
+Получившиеся неравенства говорят о том что в измерениях, скорее всего не было
+допущено ошибок.
+
+
+Случайная погрешность удельного сопротивления:
+
+$$ \rho = \frac{R_{avg} \pi D^2}{4l} => S_{\rho} = S_{R_{avg}} \frac{\pi D^2}{4l} = S_{\rho} = \frac{\rho S_{R_{avg}} }{R_{avg}}$$
+
+
+$$S_{\rho} = \frac{\rho S_{R_{avg}} }{R_{avg}} = \frac{9.32 \cdot 10^{-7} \cdot 0.038}{5.1} \approx 6.9 \cdot 10^{-9}$$
+\subsection{Полная погрешность}
+\label{sec:orgf8cd4c7}
+
+Так как измерения неслучайны по своей природе
+физические величины,а случайные погрешности уже
+учтены в систематических, то объединять их в полную погрешность
+нет необходимости. Полная погрешность равна систематической.
+
+\(\Delta R = \Theta_R = 0.18\) Ом
+
+\(\Delta \rho = \Theta_{\rho} = 0.659 \cdot 10^{-7}\) Ом \(\cdot\) м
+\section{Выводы}
+\label{sec:org849ef53}
+
+\begin{itemize}
+\item Ознакомился с методикой обработки результатов измерений
+
+\item электрическое сопротивление провода \(5.1 \pm 0.18\) Ом
+
+\item удельное сопротивление нихрома \(\rho = (9.32 \pm 0.659) \cdot 10^{-7}\) Ом \(\cdot\) м
+
+\item экспериментальное определённое значение \(\rho\) в
+пределах погрешности близко к табличным значениям нихрома
+\(\rho_{tab} = 1.05 \cdot 10^{-6}\)
+
+\item из проведённых опытов видно, что каждое сопротивление в схеме А и B
+отличается от R\textsubscript{ср} меньше, чем на систематическую погрешность
+\(\Theta_R\) это значит, что электрическое сопротивление не зависит
+от протекающего тока и от падения напряжения на нём, то есть
+справедлив Закон Ома
+
+\item Учёт сопротивления амперметра приводит к поправке
+на 0.2 Ом, а учёт сопротивления вольтметра на 0.02 Ом. По скольку
+результат нужно округлять до опр. количества единиц, то при
+округления до десятых лучше использовать схему B.
+\end{itemize}
 \end{document}
